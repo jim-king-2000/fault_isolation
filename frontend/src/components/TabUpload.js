@@ -1,4 +1,4 @@
-import { Box, Form, FormField, TextInput, Button } from 'grommet';
+import { Box, Form, FormField, TextInput, TextArea, Button } from 'grommet';
 
 async function upload(value) {
   const response = await fetch('/api/update', {
@@ -26,6 +26,12 @@ function TabUpload() {
         </FormField>
         <FormField name='UserPattern' htmlFor='UserPattern' label='User Pattern:'>
           <TextInput id='UserPattern' name='UserPattern' placeholder='Regular Expression' />
+        </FormField>
+        <FormField required name='Tip' htmlFor='Tip' label='Tip:'>
+          <TextArea id='Tip' name='Tip' placeholder='Required' />
+        </FormField>
+        <FormField name='Commands' htmlFor='Commands' label='Commands:'>
+          <TextArea id='Commands' name='Commands' />
         </FormField>
         <Box direction='row' gap='small'>
           <Button type='submit' primary label='Add' />
