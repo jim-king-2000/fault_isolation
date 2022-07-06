@@ -1,8 +1,19 @@
 import { Box, Form, FormField, TextInput, Button } from 'grommet';
 
+async function upload(value) {
+  const response = await fetch('/api/update', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(value),
+  });
+  if (response.ok) console.log(await response.json());
+}
+
 function TabUpload() {
   return (
-    <Form onSubmit={({ value }) => console.log(value)}>
+    <Form onSubmit={({ value }) => upload(value)}>
       <Box gap='small'>
         <FormField name='Board' htmlFor='Board' label='Board:'>
           <TextInput id='Board' name='Board' />

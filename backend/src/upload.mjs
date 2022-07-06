@@ -6,5 +6,5 @@ console.log(`Mongoose connected to ${mongoUrl}`);
 
 export async function upload(ctx) {
   console.log(ctx.request.body);
-  return 'upload';
+  return JSON.stringify({ result: 'OK' });
 }

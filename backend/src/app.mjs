@@ -6,7 +6,7 @@ import { upload } from './upload.mjs';
 const app = new Koa();
 const router = new Router();
 
-router.get('/', (ctx) => ctx.body = 'test');
+router.get('/', (ctx) => ctx.body = JSON.stringify({ x: 1 }));
 router.post('/upload', koaBody(), async (ctx) => ctx.body = await upload(ctx));
 
 app.use(router.routes());
