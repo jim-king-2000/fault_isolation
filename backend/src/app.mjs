@@ -5,7 +5,7 @@ const app = new Koa();
 const router = new Router();
 
 router.get('/', (ctx) => ctx.body = 'test');
-router.get('/upload', (ctx) => ctx.body = 'upload')
+router.get('/upload', (ctx) => ctx.body = 'upload');
 
 app.use(router.routes());
 app.use(router.allowedMethods());
