@@ -1,7 +1,7 @@
 import { Box, Form, FormField, TextInput, TextArea, Button } from 'grommet';
 
 async function upload(value) {
-  const response = await fetch('/api/update', {
+  const response = await fetch('/api/upload', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

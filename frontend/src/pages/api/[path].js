@@ -1,7 +1,9 @@
-import { baseUrl } from './common.js';
+export const baseUrl = 'http://localhost:4000';
 
 export default async function handler(req, res) {
-  const response = await fetch(baseUrl + '/upload', {
+  const { path } = req.query;
+  console.log(path, baseUrl + '/' + path)
+  const response = await fetch(baseUrl + '/' + path, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
