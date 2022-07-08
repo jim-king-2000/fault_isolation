@@ -1,7 +1,12 @@
 import Koa from 'koa';
 import Router from '@koa/router';
 import koaBody from 'koa-body';
+import mongoose from 'mongoose';
 import { upload } from './upload.mjs';
+
+const mongoUrl = 'mongodb://106.14.249.162:27017/test';
+await mongoose.connect(mongoUrl);
+console.log(`Mongoose connected to ${mongoUrl}`);
 
 const app = new Koa();
 const router = new Router();

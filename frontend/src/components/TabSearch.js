@@ -4,7 +4,7 @@ function TabSearch() {
   return (
     <Box gap='small'>
       <Text>Board:</Text>
-      <TextInput />
+      <TextInput placeholder='default' />
       <Text>Test:</Text>
       <TextInput placeholder='TEST.1' />
       <Text>Error:</Text>

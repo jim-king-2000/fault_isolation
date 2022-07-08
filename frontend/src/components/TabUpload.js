@@ -15,23 +15,23 @@ function TabUpload() {
   return (
     <Form onSubmit={({ value }) => upload(value)}>
       <Box gap='small'>
-        <FormField name='Board' htmlFor='Board' label='Board:'>
-          <TextInput id='Board' name='Board' />
+        <FormField required name='board' htmlFor='board' label='Board:'>
+          <TextInput id='board' name='board' placeholder='default' />
         </FormField>
-        <FormField name='Test' htmlFor='Test' label='Test:'>
-          <TextInput id='Test' name='Test' placeholder='TEST.1' />
+        <FormField required name='test' htmlFor='test' label='Test:'>
+          <TextInput id='test' name='test' placeholder='TEST.1' />
         </FormField>
-        <FormField name='Error' htmlFor='Error' label='Error:'>
-          <TextInput id='Error' name='Error' placeholder='SOFTWARE_ERROR' />
+        <FormField required name='error' htmlFor='error' label='Error:'>
+          <TextInput id='error' name='error' placeholder='SOFTWARE_ERROR' />
         </FormField>
-        <FormField name='UserPattern' htmlFor='UserPattern' label='User Pattern:'>
-          <TextInput id='UserPattern' name='UserPattern' placeholder='Regular Expression' />
+        <FormField required name='userPattern' htmlFor='userPattern' label='User Pattern:'>
+          <TextInput id='userPattern' name='userPattern' placeholder='Regular Expression' />
         </FormField>
-        <FormField required name='Tip' htmlFor='Tip' label='Tip:'>
-          <TextArea id='Tip' name='Tip' placeholder='Required' />
+        <FormField required name='tip' htmlFor='tip' label='Tip:'>
+          <TextArea id='tip' name='tip' placeholder='Required' />
         </FormField>
-        <FormField name='Commands' htmlFor='Commands' label='Commands:'>
-          <TextArea id='Commands' name='Commands' />
+        <FormField name='commands' htmlFor='commands' label='Commands:'>
+          <TextArea id='commands' name='commands' />
         </FormField>
         <Box direction='row' gap='small'>
           <Button type='submit' primary label='Add' />
